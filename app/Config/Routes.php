@@ -40,6 +40,12 @@ $routes->get('profile', 'User::profile', ['filter' => 'auth']);
 $routes->get('logout', 'User::logout');
 $routes->get('dashboard', 'Dashboard::index', ['filter' => 'auth']);
 
+$routes->group("api", function ($routes) {
+    $routes->post("register", "User::aregister");
+    $routes->post("login", "User::alogin");
+    $routes->get("users", "User::aindex", ['filter' => 'authFilter']);
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

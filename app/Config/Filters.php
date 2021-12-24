@@ -8,6 +8,7 @@ use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
 use App\Filters\Auth;
 use App\Filters\Noauth;
+use App\Filters\AuthFilter;
 
 class Filters extends BaseConfig
 {
@@ -23,6 +24,7 @@ class Filters extends BaseConfig
         'honeypot' => Honeypot::class,
         "auth" => Auth::class,
         "noauth" => Noauth::class,
+        'authFilter' => AuthFilter::class,
     ];
 
     /**
